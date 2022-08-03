@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="static/style.css">
 	<link rel="stylesheet" href="static/style2.css">
+	        
     <title> Home </title>
 
 </head>
@@ -29,59 +30,58 @@
 
     </nav>
 
-    <div class="body-text">
+    <h1 class="body-text"> CD'ING </h1>
 
-    	<form method="post" action="/">
-        <h2>
-        Log in to your account!
-        </h2>
-        <br/>
-        <p >
-        Please fill up your information below to log in.
-        </p>
 
-        <div>
-            <label>Email address*</label>
-            <div>
-                <input type="email"  name="email" id="emailStr" required>
-            </div>
-        </div>
+    <div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" method="get" action="/shop">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="Email" name="email" required>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Password" name="password" required minlength="6">
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Log In Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
 
-        <div>
-            <label>Password*</label>
-            <div class="input-group">
-                <input type="password"  name="password" minlength="6">
-            </div>
-        </div>
-        
-        <div>
-            <input id="button1" type="submit"/ style= "border-radius: 12px; background-color: white;
-  color: black;
-  border: 2px solid #000000; padding:10px; margin-top: 10%;">
-        </div>
-    </form>
-    </div>
 
-    <div class="container-fluid text-center">
-		<h2>Services</h2>
-		<h4>What we offer</h4>
-		<br>
-		<div class="row">
-			<div class="col-sm-4">
-				<span class="fas fa-carrot"></span>
-				<h4> CD shopping </h4>
-				<p>exclusively made for my own taste</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="fas fa-carrot"></span>
-				<h4> worldwide shipping</h4>
-				<p>hot shipping</p>
-			</div>
-			<div class="col-sm-4">
-				<span class="fas fa-carrot"></span>
+    <div style="margin-left: 20%; margin-top: 10%; margin-right: 20%; ">
+
+  <div class="row">
+    <div class="col-sm-4" id="leftbox">
+		<span class="fas fa-carrot"></span>
+			<h4> CD shopping </h4>
+			<p>exclusively made for my own taste</p>
+	</div>
+    <div id="middlebox">
+		<span></span>
+		<h4> worldwide shipping</h4>
+		<p>hot shipping</p>
+	</div>
+    <div id="rightbox">
+				<span></span>
 				<h4>CD players</h4>
 				<p>to play your cds</p>
 			</div>
+  </div>
+</div>
+
 		</div>
 	</div>
 

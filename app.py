@@ -42,19 +42,20 @@ def signup():
         email = request.form['email']
         password = request.form['password']
         try:
-        	login_session['user'] = auth.create_user_with_email_and_password(email, password)
-	        users = {"email" : request.form['email'], "password" : request.form['password'], "name" : request.form['name']}
-	        db.child("users").child(login_session['user']['localId']).set(users)
-	        return redirect(url_for('signin'))
+            login_session['user'] = auth.create_user_with_email_and_password(email, password)
+            users = {"email" : request.form['email'], "password" : request.form['password'], "name" : request.form['Name']}
+            db.child("users").child(login_session['user']['localId']).set(users)
+            return redirect(url_for('signin'))
         except:
-            error = "Authentication failed"
-            print(error)
+             error = "Authentication failed"
+             print(error)
         return render_template("signup.html",error=error)
     return render_template("signup.html")
 
 @app.route('/shop')
 def shop():
-	return render_template("shop.html")
+    username =db.child("users").child(login_session['user']['localId']).get().val()['name']
+    return render_template("shop.html", username = username)
 
 @app.route('/cart')
 def cart():
